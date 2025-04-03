@@ -22,21 +22,34 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <Box sx={{ p: 4 }}>
-      <Typography variant="h4" gutterBottom>
+    <Box sx={{ p: 4, maxWidth: 800, mx: "auto" }}>
+      <Typography variant="caption" color="text.secondary">
+        Front-end • 1 месяц назад • 3 минуты
+      </Typography>
+
+      <Typography variant="h4" sx={{ my: 2 }}>
         {post.title}
       </Typography>
-      <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-        {new Date(post.createdAt).toLocaleDateString()}
-      </Typography>
+
+      <Box
+        component="img"
+        src="/images/post-cover.png"
+        alt={post.title}
+        sx={{
+          width: "100%",
+          height: 300,
+          objectFit: "cover",
+          borderRadius: 2,
+          mb: 3,
+        }}
+      />
+
       <Typography variant="body1" sx={{ mb: 2 }}>
         {post.content}
       </Typography>
 
-      <Divider sx={{ my: 3 }} />
-
-      <Typography variant="h6" gutterBottom>
-        Comments
+      <Typography variant="h6" sx={{ mt: 4, mb: 2 }}>
+        Комментарии
       </Typography>
 
       <CommentForm postId={post.id} />

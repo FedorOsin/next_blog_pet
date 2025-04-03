@@ -1,26 +1,26 @@
 [
   {
     "id": "1",
-    "title": "First Article",
+    "title": "Как работать с CSS Grid",
     "slug": "first-article",
-    "description": "This is the first article description.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod.",
+    "description": "Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS.",
+    "content": "Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы, и небольших элементов пользовательского интерфейса. Эта статья даёт общее представление о грид-раскладке и новой терминологии, которая является частью спецификации CSS Grid Layout Level 1. Более подробно показанные возможности будут описаны далее в руководстве.\n\nЧто такое грид?\n\nГрид представляет собой пересекающийся набор горизонтальных и вертикальных линий, образующих колонки и строки. Элементы могут быть помещены в грид в пределах линий этих колонок и строк. Грид имеет следующие особенности:\n\n• Простая разметка\n• Гибкая настройка колонок и строк\n• Легкое управление промежутками\n\nПонравилось? Жми ❤️",
     "createdAt": "2025-04-01T10:00:00Z"
   },
   {
     "id": "2",
-    "title": "Second Article",
+    "title": "CSS Grid: примеры использования",
     "slug": "second-article",
-    "description": "This is the second article description.",
-    "content": "Aliquam eget sapien sapien. Curabitur in metus urna.",
+    "description": "Практическое применение CSS Grid Layout на реальных проектах.",
+    "content": "CSS Grid Layout открывает широкие возможности для создания адаптивных макетов. В этой статье мы рассмотрим примеры использования гридов на практике, как реализовать layout для интернет-магазина или блога.\n\nПреимущества использования гридов:\n\n• Простота структуры\n• Гибкость при изменении разрешения\n• Минимизация использования float и flex\n\nПодробнее о реализации читайте далее.",
     "createdAt": "2025-04-02T10:00:00Z"
   },
   {
     "id": "3",
-    "title": "Third Article",
+    "title": "Секреты CSS Grid",
     "slug": "third-article",
-    "description": "This is the third article description.",
-    "content": "Phasellus non purus vel arcu tempor commodo.",
+    "description": "Полезные советы и трюки при работе с CSS Grid Layout.",
+    "content": "В этой статье собраны полезные советы и трюки, которые помогут вам использовать возможности CSS Grid Layout на максимум.\n\n• Как использовать auto-fit и auto-fill\n• Размещение элементов с помощью grid-area\n• Советы по отладке гридов\n\nЭти знания помогут вам строить более сложные и удобные интерфейсы.",
     "createdAt": "2025-04-03T10:00:00Z"
   }
 ]
