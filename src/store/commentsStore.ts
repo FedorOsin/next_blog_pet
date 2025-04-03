@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export interface Comment {
   id: string;
@@ -14,11 +15,18 @@ interface CommentsState {
   setComments: (comments: Comment[]) => void;
 }
 
-export const useCommentsStore = create<CommentsState>((set) => ({
-  comments: [],
-  addComment: (comment) =>
-    set((state) => ({
-      comments: [comment, ...state.comments],
-    })),
-  setComments: (comments) => set({ comments }),
-}));
+export const useCommentsStore = create<CommentsState>()(
+  persist(
+    (set) => ({
+      comments: [],
+      addComment: (comment) =>
+        set((state) => ({
+          comments: [comment, ...state.comments],
+        })),
+      setComments: (comments) => set({ comments }),
+    }),
+    {
+      name: "comments-storage",
+    }
+  )
+);
