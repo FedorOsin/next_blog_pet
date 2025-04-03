@@ -1,21 +1,20 @@
-import { getPostBySlug } from "~/utils/getPosts";
+import { getPostBySlug, getAllSlugs } from "~/utils/getPosts";
 import { notFound } from "next/navigation";
-import { Box, Typography, Divider } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { CommentForm } from "~/components/CommentForm";
 import { CommentsList } from "~/components/CommentsList";
 
-interface PostPageProps {
-  params: { slug: string };
-}
-
 export async function generateStaticParams() {
-  const { getAllSlugs } = await import("~/utils/getPosts");
   const slugs = await getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostBySlug(params.slug);
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await Promise.resolve(getPostBySlug(params.slug));
 
   if (!post) {
     notFound();

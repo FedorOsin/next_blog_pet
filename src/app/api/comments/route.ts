@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
-let comments: any[] = [];
+const comments: {
+  id: string;
+  postId: string;
+  author: string;
+  text: string;
+  createdAt: string;
+}[] = [];
 
 export async function GET() {
   return NextResponse.json(comments);
