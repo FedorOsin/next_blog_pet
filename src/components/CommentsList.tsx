@@ -15,7 +15,7 @@ export const CommentsList = ({ postId }: CommentsListProps) => {
     <Box sx={{ mt: 2 }}>
       {postComments.length === 0 && (
         <Typography variant="body2" color="text.secondary">
-          No comments yet.
+          Пока нет ни одного комментария.
         </Typography>
       )}
       {postComments.map((comment) => (
